@@ -1,0 +1,8 @@
+version: "3"
+services:
+  drinktionary-api:
+    image: m4gicb/drinktionary-api:latest
+    ports:
+      - "8003:8000"
+    env_file:
+      - .env
