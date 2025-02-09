@@ -48,7 +48,7 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/th-tier-list-web-app:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/drinktionary-api:latest
           build-args: |
             MONGODB_URL=${{ secrets.MONGODB_URL }}
             DB_NAME=${{ secrets.DB_NAME }}
