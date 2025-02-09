@@ -16,18 +16,11 @@ jobs:
         with:
           node-version: 23
 
-      - name: Install Dependencies
-        run: npm install
-
       - name: Create .env file
         run: |
           echo "Creating env file"
           echo "MONGODB_URL=${{ secrets.MONGODB_URL }}" >> .env
           echo "DB_NAME=${{ secrets.DB_NAME }}" >> .env
-
-      - name: Build Project
-        run: |
-          npm run build
 
       - name: Copy Files To Lightsail
         uses: appleboy/scp-action@v0.1.7
